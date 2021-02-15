@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/traps/SpikesFactory.gd" type="Script" id=1]
+
+
+[node name="SpikeFactor" type="Node2D"]
+position = Vector2( -0.297638, -0.198425 )
+script = ExtResource( 1 )
+[connection signal="area_entered" from="Spikes" to="Spikes" method="_on_enemies_area_entered"]
