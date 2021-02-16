@@ -97,7 +97,6 @@ func flip() :
 		
 func walk():
 	input_x = 0
-	
 	# caso possa se mover
 	if !(status == APPEARING ||
 		status == DESAPPEARING ||
@@ -121,3 +120,11 @@ func hitted(_area):
 		status = HIT
 		yield(get_tree().create_timer(INTANGIBLE_TIME),"timeout")
 		intangible = false
+
+func _on_make_a_jumphit_area_entered(area):
+	if intangible == false:
+		if area.is_in_group("Enemies"):
+			current_jump = 0
+			jump(MAX_JUMP_FORCE)
+			if area.get_parent().has_method("hitted"):
+				area.get_parent().hitted(self)
