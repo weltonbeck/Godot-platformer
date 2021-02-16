@@ -1,3 +1,3 @@
 # Godot-platformer
 
-![Cover 1](./sprite/sample.png)
+![Cover 1](./sprites/sample.png)
