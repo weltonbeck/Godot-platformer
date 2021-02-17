@@ -67,6 +67,7 @@ func _physics_process(_delta):
 	movement.y += GRAVITY
 	walk()
 	flip()
+	pass_through()
 	
 	if Input.is_action_just_pressed("ui_jump") :
 		# pulo extra
@@ -113,6 +114,18 @@ func jump(force):
 	movement.y = -force
 	if status != HIT:
 		status = JUMP
+		
+func pass_through():
+	if Input.is_action_just_pressed("ui_down") :
+		var verify = false
+		for i_collision in range(0, get_slide_count() - 1):
+			var collision = get_slide_collision(i_collision)
+			if collision.collider.is_in_group("PassThrough"):
+				verify = true
+		if verify == true :
+			set_collision_mask_bit(1, false)
+			yield(get_tree().create_timer(0.03), "timeout")
+			set_collision_mask_bit(1, true)
 
 func hitted(_area):
 	if intangible == false:
