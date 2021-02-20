@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/itens/PathColledFruit.gd" type="Script" id=1]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 553.754, 82.6296, 0, 0, 0, 0, 647.193, 85.2993, 0, 0, 0, 0, 647.86, 147.369, 0, 0, 0, 0, 730.62, 150.039, -25.362, -2.66968, 25.362, 2.66968, 796.027, 103.987, 0, 0, 0, 0, 848.386, 151.577, 0, 0, 0, 0, 960.01, 151.951, 0, 0, 0, 0, 960.01, 1.74586 )
+}
+
+[node name="PathColledFruit" type="Path2D"]
+curve = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+type = "apple"
