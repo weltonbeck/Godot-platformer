@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hit (28x24).png-e1372b90c503826bc408c96545f873ac.stex"
+path="res://.import/Idle.png-cb138245d8b7eb0b85a81865c2322ead.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Items/Boxes/Box2/Hit (28x24).png"
-dest_files=[ "res://.import/Hit (28x24).png-e1372b90c503826bc408c96545f873ac.stex" ]
+source_file="res://sprites/Items/Boxes/Idle.png"
+dest_files=[ "res://.import/Idle.png-cb138245d8b7eb0b85a81865c2322ead.stex" ]
 
 [params]
 

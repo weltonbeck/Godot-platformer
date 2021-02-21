@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://scennes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/Terrain/terrain-green.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://scennes/traps/SpikeFactor.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scennes/itens/CollectedFruit.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scennes/itens/PathColledFruit.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scennes/itens/Block.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -332,6 +333,9 @@ position = Vector2( 288, 102.045 )
 position = Vector2( 441.366, 193.322 )
 
 [node name="PathColledFruit" parent="." instance=ExtResource( 10 )]
+
+[node name="Block" parent="." instance=ExtResource( 11 )]
+position = Vector2( 191, 129.691 )
 [connection signal="area_entered" from="Traps/SpikeFactor/Spikes4" to="Traps/SpikeFactor/Spikes4" method="_on_enemies_area_entered"]
 [connection signal="area_entered" from="Traps/SpikeFactor/Spikes5" to="Traps/SpikeFactor/Spikes5" method="_on_enemies_area_entered"]
 [connection signal="area_entered" from="Traps/SpikeFactor/Spikes6" to="Traps/SpikeFactor/Spikes6" method="_on_enemies_area_entered"]
